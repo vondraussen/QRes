@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: ilammy/msvc-dev-cmd@v1
         with:
@@ -24,7 +24,7 @@ jobs:
         shell: pwsh
         run: ./build.ps1
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: qres-win32
           path: dist/*
@@ -36,6 +36,6 @@ jobs:
 
       - name: Publish release
         if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: qres-win32.zip
