@@ -8,7 +8,7 @@
 #pragma warn -8084 // suppress warning for MAKELONG in BCPP 5.0
 #endif
 #define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
-#define  WINVER  0x0400
+#define  WINVER  0x0501
 
 #include <afxwin.h>         // MFC core and standard components
 #include <afxext.h>         // MFC extensions
